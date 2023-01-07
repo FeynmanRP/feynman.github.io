@@ -1,2 +1,0 @@
-# feynman.github.io
-MyWebsite
