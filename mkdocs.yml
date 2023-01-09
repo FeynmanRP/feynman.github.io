@@ -1,7 +1,108 @@
-site_name: My Docs
+# [INFO]
+site_name: FeynmanRP的个人网站 # 左上角标题
+site_url: https://feynmanrp.github.io
+site_author: FeynmanRP
+site_description: Mywebset
 
+# [UI]
 theme:
   name: material
+  palette: # 颜色模块
+    # Palette toggle for light mode
+    - scheme: default # 白天模式
+      primary: light blue # 上方专栏颜色
+      accent: indigo # 左边目录交互高亮
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate # 夜间模式
+      primary: light blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    
+  language: zh # 语言
+  # 图标
+  icon:
+    logo: fontawesome/solid/city
+    repo: fontawesome/brands/git-alt
+  favicon: images/city-solid.svg
+
+  features:
+    - navigation.instant # behaves like a Single Page Application
+    - navigation.tabs # 使用Tab来进行分类
+    - navigation.tracking # table of contents 高亮显示
+    - navigation.top # 返回顶部的按钮 在上滑时出现
+    - navigation.indexes # Tab会有一个index.md 而不是在打开Tab时打开第一篇文章
+    - navigation.expand # 打开Tab时左侧目录全部展开
+    - search.suggest # 搜索输入一些字母时推荐补全整个单词
+    - search.highlight # 搜索出的文章关键词加入高亮
+    - toc.follow # table of contents自动滚动
+
+repo_url: https://github.com/FeynmanRP/FeynmanRP.github.io
+repo_name: FeynmanRP.github.io
+copyright: Copyright &copy; 2023 吴云霄 # 左下角的版权声明
+
+extra:
+  social: # icons
+    - icon: fontawesome/brands/github
+      link: https://github.com/FeynmanRP
+      name: GitHub | FeynmanRP
+    - icon: fontawesome/brands/weibo
+      link: https://m.weibo.cn/profile/7190573413
+      name: Weibo | FeynmanRP
+# [Extensions]
+plugins:
+  - search: #搜索支持
+      lang: en
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 
 
+
+
+
+  # ——————————————————————————————————————————————————————————
+
+# [Navigtion]
+nav:
+
+
+  - 笔记:
+    - 笔记/index.md
+    - 自然语言处理 : 笔记/NLP.md
+    - 机器视觉 : 笔记/CV.md
+    - 深度学习 :
+      - 机器学习基础 : 笔记/DeepLearning/DL_01(机器学习基础).md
+      - 前馈神经网络 : 笔记/DeepLearning/DL_02(前馈神经网络).md
+      - 卷积神经网络 : 笔记/DeepLearning/DL_03(卷积神经网络).md
+      - 循环神经网络 : 笔记/DeepLearning/DL_04(循环神经网络).md
+      - 网络优化与正则化 : 笔记/DeepLearning/DL_05(网络优化与正则化).md
+      - 注意力机制与外部记忆 : 笔记/DeepLearning/DL_06(注意力机制与外部记忆).md
+      - 无监督学习 : 笔记/DeepLearning/DL_07(无监督学习).md
+    - 机器学习 :
+      - 绪论 : 笔记/MachineLearning/ML_01(绪论).md
+      - 模型评估与选择 : 笔记/MachineLearning/ML_02(模型评估与选择).md
+
+
+  - 工具:
+    - 工具/index.md
+    - markdown : 工具/markdownlrn.md
+
+  - 杂谈:
+    - 杂谈/index.md
+    - past&future : 杂谈/past&future.md
+  - 关于:
+    - 关于/index.md
+    - 个人简介 : 关于/个人简介.md
